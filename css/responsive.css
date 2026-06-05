@@ -1,0 +1,115 @@
+@media (max-width: 720px) {
+    header > div {
+        padding: 0.5rem 1rem;
+        height: 48px;
+    }
+
+    body {
+        padding-top: 48px;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .nav-desktop {
+        display: none;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        right: 0;
+        background: rgba(17, 11, 26, 0.98);
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.5rem;
+        border-bottom: 1px solid rgba(123, 44, 191, 0.2);
+    }
+
+    .nav-desktop.active {
+        display: flex;
+    }
+
+    .nav-desktop a {
+        width: 100%;
+        text-align: center;
+        padding: 0.85rem;
+    }
+
+    .logo span {
+        display: none;
+    }
+
+    .logo img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2.5rem 1.5rem;
+    }
+    .hero-text {
+        text-align: center;
+    }
+    .hero p {
+        margin: 0 auto 2rem auto;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .hero-mascot {
+        justify-self: center;
+        max-width: 280px;
+    }
+    .section {
+        min-height: auto;
+        padding: 3rem 0;
+    }
+    .hero-inner,
+    .footer-inner,
+    .gap-row {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-right {
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-inner {
+        padding: 2rem 1rem;
+    }
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .footer-right {
+        text-align: center;
+    }
+    .hero {
+        padding-top: 3.5rem;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .card-gameboy,
+    .card-body {
+        padding: 1.25rem;
+    }
+    .footer-mascot {
+        margin: 0 auto;
+    }
+    .footer-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    .footer-right {
+        text-align: center;
+    }
+}

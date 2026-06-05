@@ -4,25 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERA - REgame Awake</title>
+    <meta name="description" content="ERA - Atelier pédagogique sur les dark patterns et le jeu vidéo.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-global.css">
-    <link rel="icon" type="image/x-icon" href="/img/logo/Logo_ERA.png">
+    <link rel="icon" type="image/x-icon" href="img/logo/Logo_ERA.png">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const burgerMenu = document.querySelector('.burger-menu');
+            const navDesktop = document.querySelector('.nav-desktop');
+            
+            if (burgerMenu && navDesktop) {
+                burgerMenu.addEventListener('click', function() {
+                    navDesktop.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </head>
 <body>
-    <header>
-        <div>
+    <header class="header">
+        <div class="container header-inner">
             <a href="index.html" class="logo">
-                <img src="img/logo/Logo_ERA.png" alt="" class="logo">
+                <img src="img/logo/Logo_ERA.png" alt="Logo ERA">
                 <span>Dark patterns</span>
             </a>
-            <nav>
+            <button class="burger-menu" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-desktop">
                 <a href="index.html" class="active">Accueil</a>
-                <a href="parcours.html" >Parcours</a>
+                <a href="parcours.html">Parcours</a>
                 <a href="telechargement.html">Téléchargements</a>
             </nav>
         </div>
     </header>
-    <h1>Test site ERA</h1>
+    <main>
+        <section class="hero">
+            <div class="hero-decoration">
+                <span class="deco-star deco-1">&#9734;</span>
+                <span class="deco-star deco-2">&#9733;</span>
+                <span class="deco-star deco-3">&#9734;</span>
+                <span class="deco-star deco-4">&#9733;</span>
+                <span class="deco-star deco-5">&#9734;</span>
+                <span class="deco-star deco-6">&#9733;</span>
+                <span class="deco-blur deco-7"></span>
+                <span class="deco-blur deco-8"></span>
+                <div class="desktop-only">
+                    <span class="geo-shape geo-shape-1"></span>
+                    <span class="geo-shape geo-shape-2"></span>
+                    <span class="geo-shape geo-shape-3"></span>
+                </div>
+            </div>
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <p class="hero-tag">Atelier pédagogique · Collège 6ème</p>
+                    <h1>Les Dark Patterns<br><span class="pink">dans les jeux vidéo</span></h1>
+                    <p class="animate-fade-in-up delay-200">Apprends à repérer les pièges cachés dans tes jeux préférés. Comprendre pour mieux jouer !</p>
+                    <div class="hero-buttons">
+                        <a href="parcours.html" class="btn btn-secondary">▶ Découvrir le parcours</a>
+                        <a href="telechargement.html" class="btn btn-accent">▶ Télécharger les ressources</a>
+                    </div>
+                </div>
+                <img src="img/mascotte/mascotte etoile.png" alt="Mascotte ERA" class="hero-mascot">
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-bg">
+                <span class="bg-star bg-star-1">&#9734;</span>
+                <span class="bg-star bg-star-2">&#9733;</span>
+                <span class="bg-star bg-star-3">&#9734;</span>
+                <span class="bg-star bg-star-7">&#9733;</span>
+                <span class="bg-star bg-star-8">&#9734;</span>
+                <span class="bg-blur bg-blur-1"></span>
+                <span class="bg-blur bg-blur-2"></span>
+                <div class="desktop-only">
+                    <span class="geo-shape geo-shape-1"></span>
+                    <span class="geo-shape geo-shape-2"></span>
+                    <span class="geo-shape geo-shape-3"></span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section-title">
+                    <p class="tag animate-fade-in">Introduction</p>
+                    <h2 class="animate-fade-in-up delay-100">C'est quoi cet atelier ?</h2>
+                    <div class="divider animate-fade-in delay-200"></div>
+                </div>
+                <div class="grid">
+                    <div class="card-gameboy">
+                        <div class="card-top"><span class="card-header-icon">🎮</span><span class="card-title">Jouer</span></div>
+                        <p class="card-desc">Un parcours clair pour découvrir comment les jeux utilisent des techniques invisibles pour nous faire jouer plus longtemps.</p>
+                    </div>
+                    <div class="card-gameboy">
+                        <div class="card-top"><span class="card-header-icon">🧠</span><span class="card-title">Apprendre</span></div>
+                        <p class="card-desc">Comprends comment les dark patterns essaient de te manipuler, avec des exemples simples et parlants.</p>
+                    </div>
+                    <div class="card-gameboy">
+                        <div class="card-top"><span class="card-header-icon">💪</span><span class="card-title">Agir</span></div>
+                        <p class="card-desc">Deviens un joueur averti : tu sauras repérer les pièges et mieux choisir tes jeux.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-bg">
+                <span class="bg-star bg-star-1">&#9733;</span>
+                <span class="bg-star bg-star-2">&#9734;</span>
+                <span class="bg-star bg-star-3">&#9733;</span>
+                <span class="bg-star bg-star-4">&#9734;</span>
+                <span class="bg-star bg-star-5">&#9733;</span>
+            </div>
+            <div class="container">
+                <div class="section-title">
+                    <p class="tag animate-fade-in">Joueurs</p>
+                    <h2 class="animate-fade-in-up delay-100">Pour qui ?</h2>
+                    <div class="divider animate-fade-in delay-200"></div>
+                </div>
+                <div class="gap-row">
+                    <img src="img/mascotte/mascotte lunette.png" alt="Mascotte ERA" width="240" height="240">
+                    <div class="card card-body">
+                        <ul class="info-list">
+                            <li><span class="icon">👥</span><span><strong>Élèves de 6ème</strong> (10-11 ans)</span></li>
+                            <li><span class="icon">⏱️</span><span><strong>Durée :</strong> 35 minutes</span></li>
+                            <li><span class="icon">📍</span><span><strong>Groupe :</strong> classe entière ou demi-groupe</span></li>
+                            <li><span class="icon">⏱️</span><span><strong>Lieu :</strong> en classe ou au CDI</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-bg">
+                <span class="bg-star bg-star-4">&#9734;</span>
+                <span class="bg-star bg-star-5">&#9733;</span>
+                <span class="bg-star bg-star-6">&#9734;</span>
+                <span class="bg-star bg-star-9">&#9733;</span>
+                <span class="bg-star bg-star-10">&#9734;</span>
+                <span class="bg-blur bg-blur-3"></span>
+                <span class="bg-blur bg-blur-4"></span>
+                <div class="desktop-only">
+                    <span class="geo-shape geo-shape-1"></span>
+                    <span class="geo-shape geo-shape-2"></span>
+                    <span class="geo-shape geo-shape-3"></span>
+                </div>
+            </div>
+            <div class="container text-center">
+                <div class="section-title">
+                    <p class="tag animate-fade-in">Ressources</p>
+                    <h2 class="animate-fade-in-up delay-100">Télécharger le kit</h2>
+                    <div class="divider animate-fade-in delay-200"></div>
+                </div>
+                <p class="card-desc animate-fade-in-up delay-300" style="max-width:420px; margin:0 auto 2rem;">Tout le matériel nécessaire pour animer l'atelier est disponible gratuitement.</p>
+                <a href="telechargement.html" class="btn btn-accent btn-lg animate-fade-in-up delay-400">▶ Voir les fichiers</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-decoration">
+            <span class="footer-star footer-star-1">&#9734;</span>
+            <span class="footer-star footer-star-2">&#9733;</span>
+            <span class="footer-star footer-star-3">&#9734;</span>
+            <span class="footer-blur footer-blur-1"></span>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="container">
+            <div class="footer-inner">
+                <div>
+                    <h4>Comprendre pour mieux jouer</h4>
+                    <p class="desc">Un atelier pédagogique pour repérer les dark patterns dans les jeux vidéo.</p>
+                </div>
+                <div class="text-center">
+                    <img src="img/mascotte/mascotte casque.png" alt="Mascotte ERA" class="footer-mascot">
+                </div>
+                <div class="footer-right">
+                    <p class="copy">© 2025 — Atelier Dark Patterns</p>
+                    <p class="copy" style="margin-top:0.25rem;">PRESS START TO CONTINUE<span class="blink-cursor">_</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
     
 </body>
 </html>
