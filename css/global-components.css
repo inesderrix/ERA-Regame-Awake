@@ -3,12 +3,29 @@ html {
 }
 
 body {
+    font-family: 'Lexend', sans-serif;
     color: var(--fg);
     background: var(--bg);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     padding-top: 0;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Climate Crisis', cursive;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+}
+
+main {
+    flex: 1;
 }
 
 a {
