@@ -1,0 +1,578 @@
+/* css/guides.css */
+
+/* Guide Content Styles */
+.guide-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Atelier Quick Stats */
+.atelier-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.25rem;
+    margin: 2.5rem 0;
+}
+
+.stat-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--muted-fg);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.stat-val {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--fg);
+    display: block;
+}
+
+/* Timeline / Roadmaps for Parcours */
+.timeline {
+    position: relative;
+    margin: 3rem 0;
+    padding-left: 2.5rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    bottom: 5px;
+    width: 3px;
+    background: linear-gradient(180deg, var(--primary), var(--secondary), var(--gaming-mint));
+    border-radius: 999px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-badge {
+    position: absolute;
+    left: -2.5rem;
+    top: 0;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 10px rgba(123, 44, 191, 0.3);
+    z-index: 2;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-badge {
+    background: var(--secondary);
+    transform: scale(1.1);
+}
+
+.timeline-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+.timeline-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.75rem;
+}
+
+.timeline-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--fg);
+}
+
+.timeline-step-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: rgba(123, 44, 191, 0.08);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    text-transform: uppercase;
+}
+
+.timeline-body {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--muted-fg);
+}
+
+.timeline-body p {
+    margin-bottom: 1rem;
+}
+
+.timeline-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* Alert Boxes / Callouts */
+.guide-alert {
+    display: flex;
+    gap: 1rem;
+    padding: 1.25rem;
+    border-radius: var(--radius);
+    margin: 1.5rem 0;
+    border-left: 4px solid;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.guide-alert .alert-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.guide-alert .alert-content {
+    flex: 1;
+}
+
+.guide-alert .alert-title {
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+/* Guide Alert Themes */
+.guide-alert.info {
+    background: rgba(67, 97, 238, 0.05);
+    border-left-color: var(--accent);
+}
+.guide-alert.info .alert-title { color: var(--accent); }
+
+.guide-alert.tip {
+    background: rgba(46, 196, 182, 0.05);
+    border-left-color: var(--gaming-mint);
+}
+.guide-alert.tip .alert-title { color: var(--gaming-mint); }
+
+.guide-alert.warning {
+    background: rgba(240, 192, 64, 0.05);
+    border-left-color: var(--gaming-yellow);
+}
+.guide-alert.warning .alert-title { color: var(--gaming-yellow); }
+
+.guide-alert.roleplay {
+    background: rgba(255, 87, 87, 0.05);
+    border-left-color: var(--gaming-pink);
+    border: 1px solid rgba(255, 87, 87, 0.15);
+    border-left-width: 5px;
+}
+.guide-alert.roleplay .alert-title { color: var(--gaming-pink); }
+
+/* Items Reference Cards Grid */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin: 2rem 0;
+}
+
+.item-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+.item-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.item-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--fg);
+}
+
+.item-cost {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--gaming-pink);
+    background: rgba(255, 87, 87, 0.08);
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-xs);
+    white-space: nowrap;
+}
+
+.item-desc {
+    font-size: 0.85rem;
+    color: var(--muted-fg);
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+    flex-grow: 1;
+}
+
+.item-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-xs);
+    width: fit-content;
+}
+
+/* Item Type Badges */
+.item-badge.movement {
+    background: rgba(46, 196, 182, 0.1);
+    color: var(--gaming-mint);
+}
+.item-badge.disruptive {
+    background: rgba(67, 97, 238, 0.1);
+    color: var(--accent);
+}
+.item-badge.special {
+    background: rgba(123, 44, 191, 0.1);
+    color: var(--primary);
+}
+.item-badge.subscription {
+    background: rgba(255, 87, 87, 0.1);
+    color: var(--gaming-pink);
+}
+
+/* Terminal emulator for commands */
+.terminal-block {
+    background: var(--gaming-dark);
+    color: #a9b7c6;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    margin: 1.5rem 0;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: var(--shadow-md);
+}
+
+.terminal-header {
+    background: #252433;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.terminal-dot.red { background: #ff5f56; }
+.terminal-dot.yellow { background: #ffbd2e; }
+.terminal-dot.green { background: #27c93f; }
+
+.terminal-title {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+}
+
+.terminal-body {
+    padding: 1.25rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+.terminal-command {
+    color: #e5c07b;
+}
+
+.terminal-comment {
+    color: #5c6370;
+    font-style: italic;
+}
+
+/* Facilitator Guide Sections styling */
+.guide-section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.guide-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--fg);
+    border-left: 4px solid var(--primary);
+    padding-left: 1rem;
+    line-height: 1.2;
+}
+
+.guide-section h3 {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--fg);
+}
+
+.guide-section p {
+    margin-bottom: 1.25rem;
+    line-height: 1.75;
+}
+
+.guide-section ul, .guide-section ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.guide-section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.guide-section strong {
+    color: var(--fg);
+}
+
+/* Debriefing Scorecard */
+.scorecard {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.scorecard-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.scorecard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.scorecard-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xs);
+}
+
+.scorecard-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.scorecard-val {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.scorecard-val.plus { color: #22c55e; }
+.scorecard-val.minus { color: var(--gaming-pink); }
+
+/* Debrief questions list */
+.debrief-questions {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+.debrief-question-item {
+    background: rgba(123, 44, 191, 0.03);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.debrief-question-num {
+    background: var(--primary);
+    color: #fff;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.debrief-question-content h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.debrief-question-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--muted-fg);
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 768px) {
+    .guide-section {
+        padding: 1.5rem;
+    }
+    
+    .timeline {
+        padding-left: 1.75rem;
+    }
+    
+    .timeline::before {
+        left: 8px;
+    }
+    
+    .timeline-badge {
+        left: -1.75rem;
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+        border-width: 2px;
+    }
+}
+
+/* Cases list styling */
+.cases-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.case-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.case-item:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+.case-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.case-content {
+    flex: 1;
+}
+
+.case-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: var(--fg);
+}
+
+.case-desc {
+    font-size: 0.9rem;
+    color: var(--muted-fg);
+    margin: 0;
+    line-height: 1.5;
+}
+
+@media (max-width: 576px) {
+    .case-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

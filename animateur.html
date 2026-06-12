@@ -14,13 +14,18 @@
 </head>
 
 <body>
-    <header>
-        <div>
+    <header class="header">
+        <div class="container header-inner">
             <a href="index.html" class="logo">
-                <img src="img/logo/Logo_ERA.png" alt="">
+                <img src="img/logo/Logo_ERA.png" alt="Logo ERA">
                 <span>Dark patterns</span>
             </a>
-            <nav>
+            <button class="burger-menu" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-desktop">
                 <a href="index.html">Accueil</a>
                 <a href="parcours.html">Parcours</a>
                 <a href="dark-pattern.html">Dark Patterns</a>
@@ -46,15 +51,356 @@
                 </div>
             </div>
         </section>
-
         <section class="section">
-            <div class="container">
+            <div class="container guide-container">
                 <div class="section-title">
-                    <p class="tag">Guide</p>
-                    <h2>Pour les animateurs</h2>
+                    <p class="tag">Facilitation</p>
+                    <h2>Guide de l'animateur</h2>
                     <div class="divider"></div>
                 </div>
-                <p class="card-desc" style="max-width:600px; margin:0 auto;">Guide pas à pas pour animer l'atelier sur les dark patterns.</p>
+                
+                <p class="card-desc" style="max-width:650px; margin:0 auto 3rem; text-align:center;">
+                    Bienvenue dans le guide d'animation de l'atelier ERA. Ce document complet vous explique comment préparer le matériel, 
+                    comment mener la partie en incarnant les biais du jeu, et comment animer le débriefing pédagogique.
+                </p>
+
+                <!-- Phase 1 : Avant la partie -->
+                <div class="guide-section">
+                    <h2>1. Avant la partie : La Préparation</h2>
+                    <p>La réussite de l'atelier repose sur un matériel bien préparé et une bonne répartition des rôles. Suivez ces étapes pour que tout soit prêt à l'arrivée des participants.</p>
+                    
+                    <h3>Matériel physique à préparer</h3>
+                    <ul>
+                        <li><strong>Le plateau de jeu</strong> : Téléchargez et imprimez le plateau en format A3 (composé de 4 feuilles A3). Celles-ci comportent des repères d'impression permettant de les découper proprement. Dans l'idéal, il est recommandé de coller les 4 parties découpées du plateau sur une planche en bois de 50 &times; 50 cm pour un rendu stable et professionnel.</li>
+                        <li><strong>La banque et les billets</strong> : Le PDF des billets ERA est prévu pour être imprimé en recto-verso. Il contient un montant total de 300 € (50 € par joueur pour 5 joueurs maximum, et 50 € supplémentaires pour alimenter la banque centrale). Découpez-les soigneusement.</li>
+                        <li><strong>Attribution initiale des billets</strong> : Avant que les joueurs ne s'installent, préparez pour chaque joueur une enveloppe contenant exactement <strong>50 €</strong> répartis ainsi :
+                            <ul>
+                                <li>1 billet de 20 €</li>
+                                <li>2 billets de 10 €</li>
+                                <li>1 billet de 5 €</li>
+                                <li>5 billets de 1 €</li>
+                            </ul>
+                        </li>
+                        <li><strong>Pions et Cartes de crédit</strong> : Utilisez les fichiers d'impression 3D fournis dans le kit pour imprimer les pions totems et les cartes bancaires fictives. Si vous ne disposez pas d'imprimante 3D, vous pouvez utiliser des pions de jeux de société classiques et imprimer les cartes bancaires sur du papier cartonné épais.</li>
+                    </ul>
+
+                    <div class="guide-alert info">
+                        <span class="alert-icon">💳</span>
+                        <div class="alert-content">
+                            <p class="alert-title">Option NFC Immersive</p>
+                            <p class="dp-text">
+                                Pour pousser l'expérience de paiement sans contact au maximum, vous pouvez coller des puces NFC adhésives au dos des cartes bancaires imprimées en 3D. En utilisant l'application mobile gratuite <strong>NFCTool</strong> sur iOS ou Android, vous pouvez scanner la carte pour simuler un débit immédiat. Si vous n'avez pas ce matériel, jouez simplement l'effet à l'oral !
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3>Double Encadrement : L'Animateur et le Banquier</h3>
+                    <p>Pour qu'une partie se déroule dans de bonnes conditions pédagogiques (limite de 2 à 5 joueurs maximum par plateau), il est nécessaire de mobiliser <strong>deux maîtres du jeu</strong> :</p>
+                    <ul>
+                        <li><strong>L'Animateur</strong> : Il incarne l'éditeur de jeu vidéo. Son unique but est d'être très présent, de pousser au marketing agressif et d'inciter les participants à consommer. Pour garder toute sa crédibilité et sa force de persuasion, <strong>l'animateur ne peut pas tenir le rôle de banquier</strong>.</li>
+                        <li><strong>Le Banquier</strong> : Il gère les flux financiers. C'est lui qui encaisse les espèces des joueurs physiques, rend la monnaie et simule les paiements par carte bancaire.</li>
+                    </ul>
+
+                    <h3>Composition des groupes</h3>
+                    <p>Une partie de jeu rassemble entre 2 et 5 joueurs. Pour mettre en évidence l'impact du mode de paiement, vous devez répartir les participants à part égale (moitié-moitié) entre les deux modes de paiement au sein d'une même partie :</p>
+                    <ul>
+                        <li><strong>La moitié des participants</strong> règle exclusivement avec de <strong>l'argent liquide</strong> (friction maximale : ils doivent donner physiquement leurs billets au banquier).</li>
+                        <li><strong>L'autre moitié des participants</strong> dispose d'une <strong>carte bancaire fictive</strong> (friction nulle : le paiement est débité d'un simple geste).</li>
+                    </ul>
+
+                    <h3>Configuration de l'ordinateur & Rôle du meneur</h3>
+                    <p>La configuration en mode kiosque (ou le contrôle direct du site par les joueurs) est intéressante si l'on souhaite confier la souris aux participants pour plus d'immersion.</p>
+                    <p>Toutefois, pour éviter tout risque de fausse manipulation ou de perte de temps, l'animateur peut parfaitement jouer le rôle de <strong>meneur de jeu</strong> : c'est lui qui contrôle alors l'ordinateur principal, lance les dés et navigue sur le site web selon les directives des participants.</p>
+                    
+                    <div class="terminal-block">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">Windows Command Prompt — Configuration Kiosque</span>
+                        </div>
+                        <div class="terminal-body"><span class="terminal-comment"># 1. Ouvrir le menu Démarrer -> Exécuter (raccourci Windows + R)
+# 2. Saisir la commande d'ouverture du dossier de démarrage automatique :</span>
+<span class="terminal-command">shell:startup</span>
+
+<span class="terminal-comment"># 3. Créer un nouveau raccourci dans ce dossier et coller la cible suivante :</span>
+<span class="terminal-command">"C:\Program Files\Google\Chrome\Application\chrome.exe" --kiosk "https://era-regame-awake.vercel.app"</span>
+
+<span class="terminal-comment"># 4. Chrome s'ouvrira désormais directement en plein écran sur l'application ERA.</span></div>
+                    </div>
+                </div>
+
+                <!-- Phase 2 : Pendant la partie -->
+                <div class="guide-section">
+                    <h2>2. Pendant la partie : L'Animation active</h2>
+                    <p>La partie commence lorsque les joueurs ont saisi leurs pseudos et sélectionné leur totem sur l'application web. C'est maintenant que votre rôle d'animateur devient crucial.</p>
+
+                    <div class="guide-alert roleplay">
+                        <span class="alert-icon">😈</span>
+                        <div class="alert-content">
+                            <p class="alert-title">Rôleplay de l'Animateur : Soyez le Dark Pattern</p>
+                            <p class="dp-text">
+                                Durant toute la partie, vous êtes le <strong>représentant de l'éditeur de jeu</strong>. Votre but est d'inciter les joueurs à dépenser leur argent. Utilisez le marketing agressif, créez une fausse urgence et encouragez la jalousie sociale entre les participants.
+                            </p>
+                            <p class="dp-text" style="margin-top: 0.5rem; font-style: italic; font-weight: 500;">
+                                "Allez, ce boost n'est qu'à 5€ ! C'est donné !", "Tu es sûr de vouloir laisser ton camarade te dépasser ?", "Attention, cette offre se termine à la fin de ton tour !", "Acheter cet objet, c'est s'assurer la victoire !"
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3>Le Déroulement d'un Tour</h3>
+                    <p>À chaque tour, l'application web indique le nom du joueur actif. Le joueur peut effectuer les actions suivantes dans l'ordre :</p>
+                    <ol>
+                        <li><strong>Activer un objet</strong> : S'il possède un consommable dans son inventaire, il peut choisir de l'activer avant de lancer les dés pour modifier son mouvement ou bloquer un adversaire.</li>
+                        <li><strong>Lancer les dés</strong> : Cliquer sur le bouton. L'application calcule le déplacement et applique automatiquement les effets de la case d'arrivée.</li>
+                        <li><strong>Résolution de la case</strong> : Le joueur applique l'événement indiqué à l'écran (achat en boutique, tirage de carte, roulette d'objets, etc.) en collaboration avec le Banquier pour le débit d'argent.</li>
+                    </ol>
+
+                    <h3>Les Types de Cases sur le Plateau</h3>
+                    <div class="cases-list">
+                        <!-- Boutique -->
+                        <div class="case-item">
+                            <img src="img/case/boutique.png" alt="Boutique" class="case-img">
+                            <div class="case-content">
+                                <h4 class="case-title">Boutique</h4>
+                                <p class="case-desc">Propose 3 objets aléatoires. Le joueur peut en acheter un, ne rien acheter, ou payer pour changer les objets affichés (reroll).</p>
+                            </div>
+                        </div>
+
+                        <!-- Événement -->
+                        <div class="case-item">
+                            <img src="img/case/evenement.png" alt="Événement" class="case-img">
+                            <div class="case-content">
+                                <h4 class="case-title">Événement</h4>
+                                <p class="case-desc">Déclenche un effet global qui affecte tous les participants simultanément (taxes collectives, dons forcés, vols ou échanges d'objets).</p>
+                            </div>
+                        </div>
+
+                        <!-- Offre Spéciale -->
+                        <div class="case-item">
+                            <img src="img/case/spécial.png" alt="Offre Spéciale" class="case-img">
+                            <div class="case-content">
+                                <h4 class="case-title">Offre Spéciale</h4>
+                                <p class="case-desc">Le joueur peut choisir de tirer une carte payante mystère. Selon un lancer de dé, l'effet peut grandement booster sa progression ou se retourner contre lui.</p>
+                            </div>
+                        </div>
+
+                        <!-- Récompense Quotidienne -->
+                        <div class="case-item">
+                            <img src="img/case/quotidien.png" alt="Récompense Quotidienne" class="case-img">
+                            <div class="case-content">
+                                <h4 class="case-title">Récompense Quotidienne</h4>
+                                <p class="case-desc">Une roulette se lance automatiquement à l'écran et offre un objet gratuitement au joueur.</p>
+                            </div>
+                        </div>
+
+                        <!-- Neutre -->
+                        <div class="case-item">
+                            <img src="img/case/normal.png" alt="Neutre" class="case-img">
+                            <div class="case-content">
+                                <h4 class="case-title">Neutre</h4>
+                                <p class="case-desc">Rien ne se passe, le tour se termine sans action financière.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section des objets (Séparée) -->
+                <div class="guide-section">
+                    <h2>Boutique des Objets — Référence Rapide</h2>
+                    <p>Voici la liste officielle des objets de la boutique avec leur coût, leur description et leur utilité tactique pour vous aider à guider les joueurs :</p>
+                    
+                    <div class="items-grid">
+                        <div class="item-card">
+                            <div class="item-card-header">
+                                <h4 class="item-title">🚀 Boost</h4>
+                                <span class="item-cost">5 €</span>
+                            </div>
+                            <p class="item-desc">Ajoute automatiquement +4 cases au résultat du prochain lancer de dés.</p>
+                            <span class="item-badge movement">Déplacement</span>
+                        </div>
+                        <div class="item-card">
+                            <div class="item-card-header">
+                                <h4 class="item-title">⚡ Turbo</h4>
+                                <span class="item-cost">8 €</span>
+                            </div>
+                            <p class="item-desc">Avance immédiatement de 8 cases. Saute les effets de la case d'arrivée.</p>
+                            <span class="item-badge movement">Déplacement</span>
+                        </div>
+                        <div class="item-card">
+                            <div class="item-card-header">
+                                <h4 class="item-title">❄️ Freeze</h4>
+                                <span class="item-cost">10 €</span>
+                            </div>
+                            <p class="item-desc">Force le joueur adverse ciblé à passer son prochain tour de jeu.</p>
+                            <span class="item-badge disruptive">Obstacle</span>
+                        </div>
+                        <div class="item-card">
+                            <div class="item-card-header">
+                                <h4 class="item-title">🔀 Swap</h4>
+                                <span class="item-cost">16 €</span>
+                            </div>
+                            <p class="item-desc">Échange votre position physique sur le plateau avec celle du joueur ciblé.</p>
+                            <span class="item-badge disruptive">Obstacle</span>
+                        </div>
+                        <div class="item-card">
+                            <div class="item-card-header">
+                                <h4 class="item-title">🌪️ Tornade</h4>
+                                <span class="item-cost">8 €</span>
+                            </div>
+                            <p class="item-desc">Fait reculer un joueur adverse de 6 cases. L'effet de sa case d'arrivée s'applique.</p>
+                            <span class="item-badge disruptive">Obstacle</span>
+                        </div>
+                        <div class="item-card">
+                            <div class="item-card-header">
+                                <h4 class="item-title">🌀 Téléporteur</h4>
+                                <span class="item-cost">20 €</span>
+                            </div>
+                            <p class="item-desc">Lance un dé. 1-2 : recule de 3 cases. 3-5 : avance de 5. 6 : avance de 8.</p>
+                            <span class="item-badge movement">Aléatoire</span>
+                        </div>
+                        <div class="item-card">
+                            <div class="item-card-header">
+                                <h4 class="item-title">🎲 Dé Supp</h4>
+                                <span class="item-cost">25 €</span>
+                            </div>
+                            <p class="item-desc">Ajoute définitivement un second dé à tous vos lancers pour le reste de la partie.</p>
+                            <span class="item-badge special">Permanent</span>
+                        </div>
+                        <div class="item-card">
+                            <div class="item-card-header">
+                                <h4 class="item-title">📜 Contrat</h4>
+                                <span class="item-cost">25 €</span>
+                            </div>
+                            <p class="item-desc">Chaque fois qu'un autre joueur dépense de l'argent, vous gagnez 2 €.</p>
+                            <span class="item-badge special">Permanent</span>
+                        </div>
+                        <div class="item-card">
+                            <div class="item-card-header">
+                                <h4 class="item-title">👑 Grade VIP</h4>
+                                <span class="item-cost">16 €</span>
+                            </div>
+                            <p class="item-desc">La boutique affiche désormais 4 objets au lieu de 3 lors de vos passages.</p>
+                            <span class="item-badge special">Permanent</span>
+                        </div>
+                        <div class="item-card">
+                            <div class="item-card-header">
+                                <h4 class="item-title">📡 Abonnement</h4>
+                                <span class="item-cost">8 €</span>
+                            </div>
+                            <p class="item-desc">Ajoute +2 cases à chaque lancer, mais vous coûte 2 € à la banque par tour.</p>
+                            <span class="item-badge subscription">Abonnement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3 : Après la partie et Débriefing -->
+                <div class="guide-section">
+                    <h2>3. Après la partie : Débriefing & Analyse</h2>
+                    <p>La partie prend fin dès que tous les joueurs sauf un ont franchi la ligne d'arrivée. C'est l'étape la plus importante sur le plan pédagogique.</p>
+                    
+                    <h3>Révélation des Scores & Biais des Dépenses</h3>
+                    <p>Le site internet calcule automatiquement le score de chaque participant en combinant l'ordre d'arrivée et l'état financier final :</p>
+                    
+                    <div class="scorecard">
+                        <div class="scorecard-title">Points d'Arrivée (Classement sur la ligne)</div>
+                        <div class="scorecard-grid" style="margin-bottom: 1.5rem;">
+                            <div class="scorecard-item">
+                                <span class="scorecard-label">1er Arrivé</span>
+                                <span class="scorecard-val plus">+10 pts</span>
+                            </div>
+                            <div class="scorecard-item">
+                                <span class="scorecard-label">2e Arrivé</span>
+                                <span class="scorecard-val plus">+7 pts</span>
+                            </div>
+                            <div class="scorecard-item">
+                                <span class="scorecard-label">3e Arrivé</span>
+                                <span class="scorecard-val plus">+5 pts</span>
+                            </div>
+                            <div class="scorecard-item">
+                                <span class="scorecard-label">4e Arrivé</span>
+                                <span class="scorecard-val plus">+3 pts</span>
+                            </div>
+                            <div class="scorecard-item">
+                                <span class="scorecard-label">5e Arrivé</span>
+                                <span class="scorecard-val plus">+1 pt</span>
+                            </div>
+                        </div>
+
+                        <div class="scorecard-title">Bonus & Malus Supplémentaires</div>
+                        <div class="scorecard-grid">
+                            <div class="scorecard-item">
+                                <span class="scorecard-label">Argent restant</span>
+                                <span class="scorecard-val plus">+1 pt / 5€ conservés</span>
+                            </div>
+                            <div class="scorecard-item">
+                                <span class="scorecard-label">Meilleur Économe (moins dépensé)</span>
+                                <span class="scorecard-val plus">+2 pts</span>
+                            </div>
+                            <div class="scorecard-item">
+                                <span class="scorecard-label">Plus gros Dépensier (plus dépensé)</span>
+                                <span class="scorecard-val minus">-2 pts</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="guide-alert tip">
+                        <span class="alert-icon">💡</span>
+                        <div class="alert-content">
+                            <p class="alert-title">L'effet Surprise & Biais de la Carte Bleue</p>
+                            <p class="dp-text">
+                                Généralement, les joueurs munis d'une carte bancaire fictive ont tendance à dépenser beaucoup plus facilement car ils ne voient pas physiquement leur argent s'en aller (absence de friction de paiement). Cependant, il arrive parfois que l'inverse se produise ! Il s'agit d'une expérience en conditions réelles : à vous d'analyser avec les participants ce qui a pu influencer ces résultats et de tirer vos propres conclusions.
+                            </p>
+                            <p class="dp-text" style="margin-top: 0.5rem;">
+                                De plus, il est fréquent que le premier joueur arrivé ne gagne pas la partie. S'il a acheté de nombreux objets pour aller vite, les malus de dépenses et le manque de cagnotte finale le feront chuter au classement. C'est la première leçon de l'atelier : <strong>la vitesse ne compense pas le piège financier.</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3>Questions clés pour le Débriefing collectif</h3>
+                    <p>Rassemblez les participants autour de l'écran principal de présentation et posez-leur les questions suivantes pour initier le débat :</p>
+                    
+                    <ul class="debrief-questions">
+                        <li class="debrief-question-item">
+                            <span class="debrief-question-num">1</span>
+                            <div class="debrief-question-content">
+                                <h4>Avez-vous eu l'impression que la boutique vous aidait vraiment ?</h4>
+                                <p>Faites émerger le fait que la boutique cherche avant tout à vider le portefeuille en créant des déséquilibres artificiels.</p>
+                            </div>
+                        </li>
+                        <li class="debrief-question-item">
+                            <span class="debrief-question-num">2</span>
+                            <div class="debrief-question-content">
+                                <h4>Pourquoi ceux qui avaient la carte de crédit ont-ils dépensé plus facilement ?</h4>
+                                <p>Expliquez le concept d'abstraction de l'argent : ne pas voir son argent liquide diminuer supprime le signal d'alarme de notre cerveau.</p>
+                            </div>
+                        </li>
+                        <li class="debrief-question-item">
+                            <span class="debrief-question-num">3</span>
+                            <div class="debrief-question-content">
+                                <h4>Quels objets de la boutique ressemblent à ce que vous voyez dans Fortnite, FIFA ou Roblox ?</h4>
+                                <p>Faites le lien avec les mécaniques de monnaie virtuelle (V-Bucks, Robux) et les abonnements mensuels de type Battle Pass.</p>
+                            </div>
+                        </li>
+                        <li class="debrief-question-item">
+                            <span class="debrief-question-num">4</span>
+                            <div class="debrief-question-content">
+                                <h4>Qu'est-ce que la notion de FOMO (peur de rater quelque chose) a provoqué en vous ?</h4>
+                                <p>Analysez comment la fausse urgence des boutiques tournantes stresse le joueur pour le pousser à agir de manière impulsive.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="guide-alert info">
+                        <span class="alert-icon">📂</span>
+                        <div class="alert-content">
+                            <p class="alert-title">Support de Débriefing</p>
+                            <p class="dp-text">
+                                Pour vous aider lors de cette présentation, téléchargez les diapositives du kit de débriefing (PDF) sur notre page <a href="telechargement.html">Téléchargements</a>. Il s'agit d'un support illustré très visuel et interactif spécialement conçu pour les collégiens.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
