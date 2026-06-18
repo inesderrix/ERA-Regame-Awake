@@ -67,11 +67,15 @@
     .dp-entry {
         grid-template-columns: auto 1fr;
         gap: 2rem;
-        align-items: start;
+        align-items: center;
     }
 
     .dp-entry:nth-child(even) {
         grid-template-columns: 1fr auto;
+    }
+
+    .dp-entry:nth-child(odd) .dp-mascot {
+        transform: scaleX(-1);
     }
 
     .dp-entry:nth-child(even) .dp-mascot {
@@ -79,9 +83,11 @@
     }
 
     .dp-mascot {
-        width: 240px;
-        max-width: 240px;
+        width: clamp(180px, 18vw, 260px);
+        max-width: 260px;
+        height: auto;
         flex-shrink: 0;
+        object-fit: contain;
     }
 }
 
@@ -161,9 +167,7 @@
     }
 
     .dp-mascot {
-        width: min(180px, 100%);
-        margin: 0 auto;
-        display: block;
+        display: none;
     }
 }
 
@@ -171,12 +175,6 @@
     .dp-entry {
         grid-template-columns: 1fr;
         gap: 1rem;
-    }
-
-    .dp-mascot {
-        width: 60px;
-        height: 60px;
-        margin: 0 auto;
     }
 
     .dp-header {
