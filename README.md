@@ -20,7 +20,7 @@ L'objectif : aider les collégiens (10-14 ans) à comprendre et déjouer les tec
 
 ---
 
-#### Pages du site
+###Pages du site
 
 | Page | Description |
 |------|-------------|
@@ -32,6 +32,9 @@ L'objectif : aider les collégiens (10-14 ans) à comprendre et déjouer les tec
 
 ---
 
-##### Lancer le site
+### Lancer le site
 1. Cloner ou télécharger le dossier `era-site/`
 2. Ouvrir `index.html` dans votre navigateur
+
+### Lien du site déployer
+https://era-regame-awake.vercel.app
