@@ -38,3 +38,8 @@ L'objectif : aider les collégiens (10-14 ans) à comprendre et déjouer les tec
 
 ### Lien du site déployer
 https://era-regame-awake.vercel.app
+
+### Lien vers le github
+https://github.com/inesderrix/ERA-Regame-Awake
+
+
