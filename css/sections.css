@@ -91,6 +91,7 @@
 }
 
 .hero h1 {
+  font-family: 'Climate Crisis', cursive;
   font-size: clamp(1.5rem, 6vw, 3rem);
   color: #fff;
   margin-bottom: 1.25rem;
