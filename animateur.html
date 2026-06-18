@@ -11,6 +11,18 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-global.css">
     <link rel="icon" type="image/x-icon" href="/img/logo/Logo_ERA.png">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const burgerMenu = document.querySelector('.burger-menu');
+            const navDesktop = document.querySelector('.nav-desktop');
+            
+            if (burgerMenu && navDesktop) {
+                burgerMenu.addEventListener('click', function() {
+                    navDesktop.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -18,7 +30,7 @@
         <div class="container header-inner">
             <a href="index.html" class="logo">
                 <img src="img/logo/Logo_ERA.png" alt="Logo ERA">
-                <span>Dark patterns</span>
+                <span>REgame Awake</span>
             </a>
             <button class="burger-menu" aria-label="Menu">
                 <span></span>
@@ -428,8 +440,8 @@
                     <img src="img/mascotte/mascotte casque.png" alt="Mascotte ERA" class="footer-mascot">
                 </div>
                 <div class="footer-right">
-                    <p class="copy">© 2025 — Atelier Dark Patterns</p>
-                    <p class="copy" style="margin-top:0.25rem;">PRESS START TO CONTINUE<span class="blink-cursor">_</span></p>
+                    <p class="copy">© 2026 — Atelier Dark Patterns</p>
+                    <p class="copy" style="margin-top:0.25rem;">GAME ON<span class="blink-cursor">_</span></p>
                 </div>
             </div>
         </div>

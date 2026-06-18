@@ -351,7 +351,17 @@
     font-size: 0.85rem;
     line-height: 1.5;
     overflow-x: auto;
-    white-space: pre;
+    white-space: pre-wrap;
+    word-break: break-word;
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 720px) {
+    .terminal-body {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
 }
 
 .terminal-command {
@@ -371,6 +381,8 @@
     padding: 2.5rem;
     margin-bottom: 3rem;
     box-shadow: var(--shadow-sm);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .guide-section h2 {
@@ -553,6 +565,108 @@
     .terminal-body {
         font-size: 0.75rem;
         padding: 1rem;
+    }
+    
+    .case-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .case-item:nth-child(even) {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 900px) {
+    .guide-container {
+        padding: 0 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .guide-section {
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .items-grid,
+    .scorecard-grid,
+    .timeline,
+    .cases-list {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .guide-alert,
+    .debrief-question-item {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: stretch;
+        text-align: left;
+    }
+
+    .guide-alert {
+        gap: 1rem;
+    }
+
+    .debrief-question-item {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .guide-section {
+        padding: 1.25rem;
+    }
+
+    .hero-short {
+        padding: 2rem 1rem;
+    }
+
+    .hero-short h1 {
+        font-size: 2rem;
+    }
+
+    .guide-alert {
+        gap: 0.75rem;
+    }
+
+    .case-item,
+    .case-item:nth-child(even) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .debrief-question-item {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: left;
+    }
+}
+
+@media (max-width: 640px) {
+    .guide-section {
+        padding: 1.25rem;
+    }
+
+    .guide-alert {
+        gap: 0.75rem;
+    }
+
+    .case-item,
+    .case-item:nth-child(even) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .debrief-question-item {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: left;
     }
 }
 
