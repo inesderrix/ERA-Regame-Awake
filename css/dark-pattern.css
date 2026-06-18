@@ -63,6 +63,28 @@
     min-width: 0;
 }
 
+@media (min-width: 1024px) {
+    .dp-entry {
+        grid-template-columns: auto 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .dp-entry:nth-child(even) {
+        grid-template-columns: 1fr auto;
+    }
+
+    .dp-entry:nth-child(even) .dp-mascot {
+        order: 2;
+    }
+
+    .dp-mascot {
+        width: 240px;
+        max-width: 240px;
+        flex-shrink: 0;
+    }
+}
+
 .dp-header {
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
